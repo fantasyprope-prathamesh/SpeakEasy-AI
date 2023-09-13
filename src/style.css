@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bg-secondary-dark{
+    background-color: rgb(26, 25, 25);
+}
+
+.bg-secondary-medium{
+    background-color: rgb(34, 30, 31);
+}
+
+
+.bg-secondary-lighter{
+    background-color: rgba(46, 44, 44, 0.993);
+}
+
+.bg-download-section-color{
+    background-color: rgb(56, 55, 55);
+}
