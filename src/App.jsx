@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Dashboard from './Dashboard';
+import Dashboard from "./Dashboard";
 
 function App() {
-
   return (
     <>
-     <Dashboard/>
+      <Dashboard />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

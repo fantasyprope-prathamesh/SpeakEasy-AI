@@ -1,24 +1,21 @@
-import React , { useEffect, useRef } from "react";
-import {useSelector, useDispatch } from "react-redux"
+import React, { useEffect, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { updateResult } from "./store/slices/resultSlice";
 
 function DownloadSection() {
-
-  //accessing glkobal result state..
-  const resultText = useSelector((state)=>{
+  //accessing global result state..
+  const resultText = useSelector((state) => {
     return state.result;
-  })
+  });
 
-  useEffect(()=>{
-      console.log("hellow this is downloadSection" + resultText)
-  },[resultText])
+  useEffect(() => {
+    console.log("hellow this is downloadSection" + resultText);
+  }, [resultText]);
 
-  
   const contentRef = useRef(null);
 
   const handleExportClick = () => {
-
-    console.log("my one : " + resultText)
+    console.log("my one : " + resultText);
 
     // const content = contentRef.current.innerText;
     const content = resultText;
@@ -36,20 +33,30 @@ function DownloadSection() {
   return (
     <>
       {/* download section  */}
-      <div className="bg-download-section-color d-flex justify-content-center align-self-center " style={{ height: "10vh" }}>
+      <div
+        className="bg-download-section-color d-flex justify-content-center align-self-center "
+        style={{ height: "10vh" }}
+      >
         <div
-          id="content" 
+          id="content"
           ref={contentRef}
           className="inner-Download-Section   d-flex justify-content-center align-self-center"
-          style={{ height: "70%" ,width:"80%" ,marginTop:"0.7em",
-            display:"flex", justifyContent:"center", alignItems:"center"
-           }}>
-
-            <button className="btn btn-primary" style={{height:"80%"}}
+          style={{
+            height: "70%",
+            width: "80%",
+            marginTop: "0.7em",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <button
+            className="btn btn-primary"
+            style={{ height: "80%" }}
             onClick={handleExportClick}
-            >
-              Download
-            </button>
+          >
+            Download
+          </button>
         </div>
       </div>
     </>
